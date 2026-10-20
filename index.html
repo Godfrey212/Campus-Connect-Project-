@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123b5d">
+  <meta name="description" content="CampusConnect Student Academic Portal demo for course resources, timetable, announcements and study notes.">
+  <title>CampusConnect | Student Academic Portal</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="CampusConnect home"><span class="brand-mark">CC</span><span>CampusConnect<small>Student Academic Portal</small></span></a>
+    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="nav">
+      <a href="#home">Home</a><a href="#courses">Courses</a><a href="#timetable">Timetable</a><a href="#announcements">Announcements</a>
+    </nav>
+    <button id="installBtn" class="install-btn" hidden>Install App</button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section-wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">LEARN • PLAN • ACHIEVE</p>
+        <h1>Your campus life,<br><span>made simpler.</span></h1>
+        <p class="hero-text">Find course resources, keep track of classes, and read campus updates in one student-friendly place.</p>
+        <a class="primary-btn" href="#courses">Explore courses <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-top"><span class="live-dot"></span> STUDENT DASHBOARD <span class="demo-tag">DEMO</span></div>
+        <p class="welcome">Welcome, Student 👋</p>
+        <p class="muted">Your learning overview</p>
+        <div class="stats">
+          <div><strong>04</strong><span>Sample courses</span></div>
+          <div><strong>03</strong><span>Upcoming classes</span></div>
+          <div><strong>02</strong><span>New updates</span></div>
+        </div>
+        <div class="progress-label"><span>Weekly study goal</span><b>70%</b></div>
+        <div class="progress"><span></span></div>
+        <p class="small-note">Demo information only. No real student records are stored.</p>
+      </div>
+    </section>
+
+    <section class="quick-strip section-wrap" aria-label="Portal benefits">
+      <div><span class="quick-icon">▣</span><span><b>Course resources</b><small>Keep learning materials together</small></span></div>
+      <div><span class="quick-icon">◷</span><span><b>Class timetable</b><small>Plan your week quickly</small></span></div>
+      <div><span class="quick-icon">◉</span><span><b>Campus updates</b><small>Read important notices</small></span></div>
+    </section>
+
+    <section id="courses" class="content-section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">YOUR LEARNING SPACE</p><h2>Course resources</h2><p class="muted">Choose a sample course to view its description and study tips.</p></div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="courseSearch" type="search" placeholder="Search courses..." aria-label="Search courses"></label>
+      </div>
+      <div id="courseGrid" class="course-grid">
+        <article class="course-card" data-search="cre 324 web development responsive progressive website"><div class="course-icon blue">⌘</div><p class="course-code">CRE 324</p><h3>Web Development</h3><p>Learn how websites are structured, styled and made interactive.</p><button class="text-btn course-detail" data-title="CRE 324 — Web Development" data-info="Study HTML structure, CSS styling, JavaScript interactivity, responsive design and Progressive Web App features.">View course details →</button></article>
+        <article class="course-card" data-search="csc 301 programming software"><div class="course-icon purple">{ }</div><p class="course-code">CSC 301</p><h3>Programming</h3><p>Practise problem-solving, program logic and writing clear code.</p><button class="text-btn course-detail" data-title="CSC 301 — Programming" data-info="Focus on variables, data types, conditions, loops, functions, debugging and problem-solving exercises.">View course details →</button></article>
+        <article class="course-card" data-search="dts 304 data management database sql"><div class="course-icon green">▤</div><p class="course-code">DTS 304</p><h3>Data Management</h3><p>Understand how data is organised, stored and retrieved.</p><button class="text-btn course-detail" data-title="DTS 304 — Data Management" data-info="Revise tables, primary keys, foreign keys, SQL commands, relationships and database queries.">View course details →</button></article>
+        <article class="course-card" data-search="cos 355 artificial intelligence knowledge representation"><div class="course-icon orange">✧</div><p class="course-code">COS 355</p><h3>Artificial Intelligence</h3><p>Explore intelligent systems and how computers solve problems.</p><button class="text-btn course-detail" data-title="COS 355 — Artificial Intelligence" data-info="Review knowledge representation, logic, inference, search methods and examples of intelligent systems.">View course details →</button></article>
+      </div>
+      <p id="noCourses" class="muted" hidden>No courses match your search. Try another course code or name.</p>
+    </section>
+
+    <section id="timetable" class="content-section timetable-section">
+      <div class="section-wrap">
+        <div class="section-heading"><div><p class="eyebrow">STAY ORGANISED</p><h2>Sample weekly timetable</h2><p class="muted">An example schedule for demonstration. Replace it with your group's actual timetable.</p></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Day</th><th>Time</th><th>Course</th><th>Venue</th></tr></thead><tbody>
+          <tr><td>Monday</td><td>9:00 AM</td><td>CRE 324 — Web Development</td><td>Computer Lab</td></tr>
+          <tr><td>Tuesday</td><td>11:00 AM</td><td>DTS 304 — Data Management</td><td>Lecture Hall</td></tr>
+          <tr><td>Wednesday</td><td>10:00 AM</td><td>CSC 301 — Programming</td><td>Computer Lab</td></tr>
+          <tr><td>Thursday</td><td>12:00 PM</td><td>COS 355 — Artificial Intelligence</td><td>Lecture Hall</td></tr>
+        </tbody></table></div>
+      </div>
+    </section>
+
+    <section id="announcements" class="content-section section-wrap">
+      <div class="section-heading"><div><p class="eyebrow">WHAT'S HAPPENING</p><h2>Campus announcements</h2><p class="muted">Sample notices that can be updated by the project team.</p></div></div>
+      <div class="announcement-list">
+        <article class="announcement"><span class="announcement-icon">!</span><div><span class="notice-label">ACADEMIC</span><h3>Check your course timetable</h3><p>Students should confirm class times and venues with their department.</p></div><time>Sample notice</time></article>
+        <article class="announcement"><span class="announcement-icon">✓</span><div><span class="notice-label">STUDY TIP</span><h3>Plan a weekly study routine</h3><p>Set small study goals and review your lecture notes regularly.</p></div><time>Sample notice</time></article>
+      </div>
+    </section>
+
+    <section class="offline-banner section-wrap"><div><span class="offline-icon">↯</span><div><h3>Designed for real student needs</h3><p>After the site has been loaded once while online, its main pages and sample resources can be available offline in a supported browser.</p></div></div><span id="connectionStatus" class="status-pill">Checking connection…</span></section>
+  </main>
+
+  <footer class="footer"><div class="section-wrap footer-inner"><a class="brand footer-brand" href="#home"><span class="brand-mark">CC</span><span>CampusConnect<small>CRE 324 Group 10 Project</small></span></a><p>Responsive and Progressive Website • Educational demonstration</p><p>© <span id="year"></span> CampusConnect</p></div></footer>
+
+  <dialog id="courseDialog"><button class="dialog-close" id="dialogClose" aria-label="Close">×</button><p class="eyebrow">COURSE INFORMATION</p><h2 id="dialogTitle">Course details</h2><p id="dialogInfo"></p><button class="primary-btn" id="dialogDone">Got it</button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>

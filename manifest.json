@@ -1,0 +1,18 @@
+{
+  "name": "CampusConnect Student Academic Portal",
+  "short_name": "CampusConnect",
+  "description": "A responsive student portal demonstration for course resources, timetable and campus announcements.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#123b5d",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
